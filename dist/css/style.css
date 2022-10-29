@@ -108,7 +108,7 @@
   right: -38px;
   width: 32px;
   height: 32px;
-  background: url("../../img/close-icon.svg") no-repeat;
+  background: url("./../img/close-icon.svg") no-repeat;
   cursor: pointer;
 }
 
@@ -783,6 +783,10 @@ body {
 
   .hero-swiper_item {
     height: calc(90vh - 240px);
+  }
+
+  .hero-swiper__image {
+    background-size: cover;
   }
 }
 
