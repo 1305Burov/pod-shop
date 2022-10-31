@@ -44,7 +44,7 @@ export const cart = () => {
 
         if (e.target.classList.contains('btn')) {
             const product = e.target.parentElement.previousElementSibling.textContent;
-            addToCart(product, cartData);
+            addToCart(product);
             
             e.target.nextElementSibling.nextElementSibling.classList.add('adding');
 
@@ -162,7 +162,9 @@ export const cart = () => {
         }
     }
 
-    const addToCart = (product, cartData) => {
+    const addToCart = (product) => {
+        const cartData = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+
         if (cartData.some((item) => item.product === product)) {
             cartData.map((item) => {
                 if (item.product === product) {
