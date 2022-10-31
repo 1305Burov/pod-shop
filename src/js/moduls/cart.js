@@ -143,7 +143,7 @@ export const cart = () => {
     const changeCount = () => {
         const cartCount = document.querySelectorAll('.cart__count');
         
-        if (JSON.parse(localStorage.getItem('cart')).length) {
+        if (JSON.parse(localStorage.getItem('cart'))) {
             const count = JSON.parse(localStorage.getItem('cart')).reduce((p, item) => {
                 return p += item.count;
             }, 0);
